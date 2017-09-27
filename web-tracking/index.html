@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>web-track-test</title>
+    </head>
+    <body>
+        <p>web-track-test</p>
+    </body>
+    <script type="text/javascript" src="loghub-tracking.js" ></script> 
+    <script type="text/javascript" src=" badJsReport.js" ></script>  
+   <script>
+        badJsReport({
+            data:{
+                name:"contest"
+            },//自定义数据
+            endPoint:"web-track.cn-hangzhou.log.aliyuncs.com",//日志服务的url
+            project:"web-track",//日志服务的项目名称
+            logstore:"logstore"//日志库
+        });
+        console.log(qqq);
+    </script>
+    <script type="text/javascript" src="jquery-3.2.1.min.js" ></script>
+    <!-- <script> 
+        $.ajax({
+          type: 'GET',
+          url:'http://127.0.0.1:8080/contest/area',
+          dataType: 'json',
+          success: function(data){
+            if(data.success){
+              
+            }else{
+                
+            }
+              
+          },
+          error: function(XMLHttpRequest, textStatus){
+            var logger = new window.Tracker('lvbo-contest.cn-hangzhou.log.aliyuncs.com','lvbo-contest','contest');
+                logger.push('ajaxError', textStatus);
+                logger.logger();
+
+
+            console.log(textStatus);
+
+          }
+        })
+    </script> -->
+</html>
