@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            #box{
+                width: 420px;
+                height: 96px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/gg.js"></script>
+    <script type="text/javascript">
+                    $('#box').wScratchPad({
+                        size        : 5,          // The size of the brush/scratch.
+                        bg          : '#999',  // Background (image path or hex color).
+                        fg          : 'img/pic-4.png',  // Foreground (image path or hex color).
+                        realtime    : true,       // Calculates percentage in realitime.
+                        scratchDown : null,       // Set scratchDown callback.
+                        scratchUp   : function(e, percent){
+                            $('#box').wScratchPad('clear');
+                        },       // Set scratchUp callback.
+                        scratchMove : null,       // Set scratcMove callback.
+                        cursor      : 'crosshair' // Set cursor.
+                    });
+    </script>
+</html>
